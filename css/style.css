@@ -1,0 +1,111 @@
+:root {
+    --color-white: #fff;
+    --color-black: #000000;
+    --color-blue-dark: #0E485E;
+    --color-blue-light: #ABD3E3;
+    --color-blue-base: #22a9dd;
+    --color-blue-darker: #2A505E;
+    --color-blue-lighter: #1A82AB;
+}
+
+* {
+    outline: none;
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* HEADER STYLE */
+.header {
+    width: 100%;
+    height: 18vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header .header-judul {
+    width: 100%;
+    background: var(--color-blue-dark);
+    text-align: center;
+    color: var(--color-blue-light);
+}
+.header .header-menu {
+    width: 100%;
+    background: var(--color-blue-light);
+}
+.header .header-menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+.header .header-menu ul li>a {
+    margin: 0 30px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: var(--color-blue-dark);
+    font-weight: bold;
+}
+/* END STYLE HEADER */
+
+/* MIN STYLE */
+.main {
+    display: flex;
+    height: 77vh;
+    /* flex-direction: column; */
+}
+.main .main-aside {
+    display: flex;
+    flex: 20%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-blue-light);
+}
+.main .main-aside .main-aside-top {
+    margin: 20px 0;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background: silver;
+    overflow: hidden;
+}
+.main .main-aside .main-aside-top img {
+    position: relative;
+    left: -20px;
+    width: 180px;
+    height: 150px;
+}
+.main .main-aside .main-aside-bottom h4 {
+    margin: 0;
+}
+.main .main-aside .main-aside-bottom p {
+    margin: 5px 0;
+}
+
+.main-content {
+    flex: 80%;
+}
+.main-content .main-content-home {
+    display: flex;
+    margin: 30px 5px;
+}
+.main-content .main-content-home .main-content-img {
+    padding: 25px 20px;
+}
+.main-content .main-content-home .main-content-article {
+    padding: 20px 50px;
+}
+
+.footer {
+    width: 100%;
+    height: 5vh;
+    background: var(--color-blue-darker);
+}
+.footer p {
+    margin: 0;
+}
