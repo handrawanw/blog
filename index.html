@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    
+
     <!-- HEADER -->
     <header class="header">
         <!-- HEADER JUDUL -->
@@ -54,39 +54,66 @@
         <!-- END OF ASIDE -->
 
         <!-- CONTENT -->
-        <div class="main-content">
-            <div class="main-content-home">
-                <div class="main-content-img">
-                    <div class="fakeimg" style="height:200px; width: 200px; background: grey;">Image</div>
-                </div>
-                <div class="main-content-article">
-                    <h2>Judul</h2>
-                    <h5>Title description, Dec 7, 2017</h5>
-                    <p>Some text..</p>
-                    <p>
-                        Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                    </p>
-                </div>
-            </div>
-            <div class="main-pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a href="#" class="active">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">&raquo;</a>
-            </div>
+        <div class="main-pagination" id="pagination">
         </div>
-        <!-- END OF CONTENT -->
+        <div class="main-content" id="root">
+
+        </div>
+        <!-- END OF CONTENT <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a> -->
     </main>
     <!-- END OF MAIN -->
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>Copyright &copy; 2020. Build with Love By Martinus Richard Ticoalu</p>
+      <p>Copyright &copy; 2020. Build with Love By Martinus Richard Ticoalu</p>
     </footer>
     <!-- FOOTER -->
 </body>
+<script type="text/javascript" src="js/Pagination.js"></script>
+<script type="text/javascript">
+let init={
+  element:"#root",
+  btnElement:"#pagination",
+  data:[
+    {id:"1 Mie ayam",nama:"Wawan",keterangan:"High"},
+    {id:"2 Mie Rebus",nama:"Wawan",keterangan:"High"},
+    {id:"3 Mie Goreng",nama:"Wawan",keterangan:"High"},
+    {id:"4 Mie Soto",nama:"Wawan",keterangan:"High"},
+    {id:"5 Mie Ayam geprek",nama:"Wawan",keterangan:"High"},
+    {id:"6 Soto Mie",nama:"Wawan",keterangan:"High"},
+    {id:"7 Nasi padang",nama:"Wawan",keterangan:"High"},
+    {id:"8 Seblak",nama:"Wawan",keterangan:"High"},
+    {id:"9 Soto Mie",nama:"Wawan",keterangan:"High"},
+    {id:"10 Nasi padang",nama:"Wawan",keterangan:"High"},
+    {id:"11 Seblak",nama:"Wawan",keterangan:"High"},
+  ],
+  perPage:3,
+  btnPagination:function(data,index){
+    return `<a href="#">${data}</a>`;
+  },
+  html:function(data,index) {
+    return `<div class="main-content-home">
+        <div class="main-content-img">
+            <div class="fakeimg" style="height:200px; width: 200px; background: grey;">Image</div>
+        </div>
+        <div class="main-content-article">
+            <h2>${data.id}</h2>
+            <h5>${data.nama}</h5>
+            <p>Some text..</p>
+            <p>
+              ${data.keterangan}
+            </p>
+        </div>
+    </div>`;
+  },
+};
+    new Pagination(init);
+</script>
 </html>
